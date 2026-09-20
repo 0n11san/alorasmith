@@ -60,18 +60,16 @@
     -webkit-tap-highlight-color: transparent;
   }
   .char:focus-visible { outline: 4px solid var(--purple); outline-offset: 4px; }
-  .char.gymnast { width: 50%; left: -4%; bottom: 6%; animation: bob 3.2s ease-in-out infinite; }
-  .char.tiger   { width: 46%; left: 48%; bottom: 0;  animation: bob 2.6s ease-in-out -1s infinite; }
-  .char.shoes   { width: 38%; right: -2%; top: -2%;   animation: floaty 4s ease-in-out infinite; }
-  .char.cupcake { width: 26%; left: 8%;  top: 8%;    animation: floaty 3.6s ease-in-out -2s infinite; }
+  .char.tiger   { width: 46%; right: 0;  bottom: 0;  animation: bob 2.6s ease-in-out -1s infinite; }
+  .char.ballerina { width: 58%; left: 14%; top: -8%; animation: floaty 4s ease-in-out infinite; }
+  .char.cupcake { width: 28%; left: 2%;  bottom: 10%; animation: bob 3.6s ease-in-out -2s infinite; }
   .char.pop svg { animation: pop .6s ease; }
-  .char.shoes.spin svg { animation: twirl 1.1s ease-in-out; }
-  .char.gymnast.flip svg { animation: leap .9s ease-in-out; }
+  .char.ballerina.spin svg { animation: twirl 1.1s ease-in-out; }
 
   .stage svg.note { position: absolute; height: auto; width: 8%; color: var(--cream); animation: rise 3.4s ease-in-out infinite; pointer-events: none; }
-  .stage svg.note.n1 { left: 34%; top: 2%; }
-  .stage svg.note.n2 { right: 2%; top: 46%; width: 10%; animation-delay: -1.2s; }
-  .stage svg.note.n3 { left: 2%; top: 40%; width: 9%; animation-delay: -2.2s; }
+  .stage svg.note.n1 { left: 6%; top: 14%; }
+  .stage svg.note.n2 { right: 4%; top: 22%; width: 10%; animation-delay: -1.2s; }
+  .stage svg.note.n3 { left: 12%; top: 46%; width: 9%; animation-delay: -2.2s; }
   .stage svg.sparkle { position: absolute; height: auto; aspect-ratio: 1; width: 9%; color: #fff; animation: twinkle 2.4s ease-in-out infinite; pointer-events: none; }
   .stage svg.sparkle.s1 { left: 58%; top: 4%; }
   .stage svg.sparkle.s2 { right: 22%; top: 40%; width: 7%; animation-delay: -.8s; }
@@ -83,7 +81,6 @@
   @keyframes twinkle { 0%,100% { transform: scale(.6) rotate(0); opacity: .5; } 50% { transform: scale(1.1) rotate(20deg); opacity: 1; } }
   @keyframes pop     { 0% { transform: scale(1); } 30% { transform: scale(1.18) rotate(-6deg); } 60% { transform: scale(.94) rotate(4deg); } 100% { transform: scale(1); } }
   @keyframes twirl   { 0% { transform: rotateY(0) scale(1); } 50% { transform: rotateY(540deg) scale(1.15); } 100% { transform: rotateY(1080deg) scale(1); } }
-  @keyframes leap    { 0% { transform: translateY(0) scale(1); } 20% { transform: translateY(4%) scale(1.06,.9); } 55% { transform: translateY(-40%) rotate(-6deg) scale(1.08); } 100% { transform: translateY(0) scale(1); } }
   @keyframes rise    { 0%,100% { transform: translateY(0) rotate(-6deg); opacity: .75; } 50% { transform: translateY(-14%) rotate(6deg); opacity: 1; } }
 
   @media (max-width: 820px) {
@@ -116,35 +113,7 @@
       <path d="M12.5 4 L35.3 0.5 L35.3 7 L12.5 10.5 Z" fill="currentColor"/>
     </symbol>
 
-    <!-- GYMNAST (split leap) -->
-    <symbol id="gymnast" viewBox="0 0 200 200">
-      <ellipse cx="100" cy="176" rx="72" ry="5" fill="#000" opacity=".1"/>
-      <g transform="translate(0 20)">
-        <!-- far arm (behind) -->
-        <path d="M88 76 C80 58 70 40 62 22 C60 16 68 14 71 20 C80 38 92 56 100 72 Z" fill="#b97d52"/>
-        <!-- back leg (left), far side -->
-        <path d="M94 104 C68 106 40 112 14 121 C8 123 4 127 8 129 C12 131 18 128 24 127 C50 126 74 130 96 136 Z" fill="#b97d52"/>
-        <!-- front leg (right), near side -->
-        <path d="M108 104 C134 98 162 94 188 92 C195 91 197 95 192 98 C186 101 180 100 172 102 C146 108 126 120 106 136 Z" fill="#d29a70"/>
-        <!-- torso / leotard, arched back -->
-        <path d="M82 68 C90 58 104 58 110 68 C116 84 118 100 116 112 C114 124 106 134 96 136 C84 132 82 120 84 106 C86 92 84 80 82 68 Z" fill="#a855f7"/>
-        <path d="M84 116 C88 128 100 138 116 118 C116 112 116 108 116 104 C106 120 92 122 84 108 Z" fill="#8b3fd8"/>
-        <path d="M86 70 C94 64 104 64 108 70" stroke="#fff3d6" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <g fill="#fff3d6"><circle cx="98" cy="84" r="2.5"/><circle cx="106" cy="98" r="2.5"/><circle cx="92" cy="100" r="2.2"/><circle cx="108" cy="80" r="2"/></g>
-        <!-- near arm -->
-        <path d="M104 72 C114 58 124 40 132 20 C134 14 142 16 140 22 C134 44 124 64 114 80 Z" fill="#d29a70"/>
-        <!-- neck + head, tilted back -->
-        <path d="M92 66 L100 52 L108 60 L104 70 Z" fill="#d29a70"/>
-        <circle cx="100" cy="44" r="17" fill="#d29a70"/>
-        <circle cx="84" cy="30" r="12" fill="#2a1810"/>
-        <circle cx="74" cy="40" r="7" fill="#2a1810"/>
-        <path d="M83 46 C84 24 122 24 117 48 C112 36 94 32 83 46 Z" fill="#2a1810"/>
-        <circle cx="78" cy="20" r="4" fill="#ff5fa2"/>
-        <circle cx="108" cy="48" r="2.8" fill="#2a1810"/><circle cx="109" cy="47" r="1" fill="#fff"/>
-        <path d="M104 56 Q110 61 115 54" stroke="#7a3a1e" stroke-width="2.6" fill="none" stroke-linecap="round"/>
-        <circle cx="106" cy="56" r="4" fill="#e0806a" opacity=".5"/>
-      </g>
-    </symbol>
+    
 
     <!-- DERPY THE TIGER in a white cowboy hat -->
     <symbol id="tiger" viewBox="0 0 200 200">
@@ -185,29 +154,41 @@
       <path d="M26 88 C18 74 40 74 64 80 Q100 92 136 80 C160 74 182 74 174 88 C166 100 130 100 100 100 C70 100 34 100 26 88 Z" fill="#fffdf6" stroke="#e6dcc6" stroke-width="2"/>
     </symbol>
 
-    <!-- BALLET POINTE SHOES -->
-    <symbol id="shoes" viewBox="0 0 200 200">
-      <defs>
-        <g id="pshoe">
-          <path d="M-18 6 Q0 -4 18 6 C22 30 22 50 20 66 C19 84 18 96 16 104 Q15 112 6 112 L-6 112 Q-15 112 -16 104 C-18 96 -19 84 -20 66 C-22 50 -22 30 -18 6 Z" fill="#fff1f5" stroke="#b8477a" stroke-width="3" stroke-linejoin="round"/>
-          <path d="M-13 12 Q0 4 13 12 C16 32 16 50 14 66 C13 82 12 92 10 98 L-10 98 C-12 92 -13 82 -14 66 C-16 50 -16 32 -13 12 Z" fill="#e0709a"/>
-          <path d="M-15 104 L15 104" stroke="#b8477a" stroke-width="3" stroke-linecap="round"/>
-          <path d="M-9 26 C-10 44 -9 60 -8 74" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round" opacity=".7"/>
-        </g>
-      </defs>
-      <!-- ribbons -->
-      <g fill="none" stroke-linecap="round">
-        <path d="M76 78 C72 58 92 50 100 36 M124 78 C128 58 108 50 100 36" stroke="#b8477a" stroke-width="10"/>
-        <path d="M100 38 C80 46 34 64 32 96 C32 106 44 106 44 96 M100 38 C120 46 166 64 168 96 C168 106 156 106 156 96" stroke="#b8477a" stroke-width="10"/>
-        <path d="M76 78 C72 58 92 50 100 36 M124 78 C128 58 108 50 100 36" stroke="#fff1f5" stroke-width="5.5"/>
-        <path d="M100 38 C80 46 34 64 32 96 C32 106 44 106 44 96 M100 38 C120 46 166 64 168 96 C168 106 156 106 156 96" stroke="#fff1f5" stroke-width="5.5"/>
-      </g>
-      <use href="#pshoe" transform="translate(64 74) rotate(8)"/>
-      <use href="#pshoe" transform="translate(136 74) rotate(-8)"/>
-      <!-- bow -->
-      <path d="M100 30 C80 6 58 12 66 28 C72 40 92 36 100 30 Z" fill="#fff1f5" stroke="#b8477a" stroke-width="3" stroke-linejoin="round"/>
-      <path d="M100 30 C120 6 142 12 134 28 C128 40 108 36 100 30 Z" fill="#fff1f5" stroke="#b8477a" stroke-width="3" stroke-linejoin="round"/>
-      <circle cx="100" cy="32" r="8" fill="#fff1f5" stroke="#b8477a" stroke-width="3"/>
+    
+
+    <!-- BALLERINA -->
+    <symbol id="ballerina" viewBox="0 0 200 200">
+      <ellipse cx="100" cy="194" rx="46" ry="5" fill="#000" opacity=".12"/>
+      <!-- far arm (extended low) -->
+      <path d="M94 74 C74 76 54 84 34 98" stroke="#b97d52" stroke-width="8" fill="none" stroke-linecap="round"/>
+      <!-- standing leg on pointe -->
+      <path d="M98 128 C97 148 96 166 96 182" stroke="#d29a70" stroke-width="12" fill="none" stroke-linecap="round"/>
+      <path d="M90 176 L102 176 L98 197 Q95 198 92 196 Z" fill="#ffd9e6" stroke="#e08fb0" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M90 166 L102 176 M102 166 L90 176" stroke="#e08fb0" stroke-width="2" stroke-linecap="round"/>
+      <!-- torso / bodice -->
+      <path d="M86 112 C84 96 86 80 90 68 Q100 62 112 68 C116 80 116 96 114 112 Z" fill="#a855f7"/>
+      <path d="M90 68 Q101 78 112 68" stroke="#fff3d6" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <!-- tutu -->
+      <path d="M86 108 C60 112 38 122 30 138 C60 150 140 150 170 138 C162 122 140 112 114 108 Z" fill="#ffe3ec" stroke="#e9a9c0" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M92 112 L56 142 M98 112 L80 146 M104 112 L104 147 M110 112 L128 146 M116 112 L152 142" stroke="#f0b4c9" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M30 138 C60 150 140 150 170 138 C168 146 140 156 100 156 C60 156 32 146 30 138 Z" fill="#ffd0df"/>
+      <!-- working leg lifted (attitude) -->
+      <path d="M150 130 C162 126 172 122 178 112" stroke="#d29a70" stroke-width="11" fill="none" stroke-linecap="round"/>
+      <path d="M178 114 C170 132 150 146 128 154" stroke="#d29a70" stroke-width="9" fill="none" stroke-linecap="round"/>
+      <path d="M122 150 L134 158 L118 168 Q112 166 114 160 Z" fill="#ffd9e6" stroke="#e08fb0" stroke-width="2" stroke-linejoin="round"/>
+      <!-- near arm reaching up -->
+      <path d="M108 72 C126 62 140 44 154 24" stroke="#d29a70" stroke-width="8" fill="none" stroke-linecap="round"/>
+      <circle cx="155" cy="22" r="5" fill="#d29a70"/>
+      <circle cx="35" cy="99" r="5" fill="#b97d52"/>
+      <!-- neck + head -->
+      <path d="M96 66 L102 54 L108 60 L106 70 Z" fill="#d29a70"/>
+      <circle cx="102" cy="46" r="15" fill="#d29a70"/>
+      <circle cx="90" cy="30" r="11" fill="#2a1810"/>
+      <path d="M88 46 C88 28 118 28 116 46 C112 38 98 36 88 46 Z" fill="#2a1810"/>
+      <path d="M80 34 Q90 44 100 34" stroke="#ff8fb5" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      <circle cx="109" cy="48" r="2.5" fill="#2a1810"/><circle cx="109.8" cy="47.2" r="0.9" fill="#fff"/>
+      <path d="M106 55 Q110 59 114 54" stroke="#7a3a1e" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+      <circle cx="107" cy="55" r="3.5" fill="#e0806a" opacity=".5"/>
     </symbol>
 
     <!-- CUPCAKE -->
@@ -246,15 +227,14 @@
     <svg class="note n2" viewBox="0 0 36 30" aria-hidden="true"><use href="#note2"/></svg>
     <svg class="note n3" viewBox="0 0 24 30" aria-hidden="true"><use href="#note1"/></svg>
 
+    <button class="char ballerina" aria-label="Ballerina, tap to twirl"><svg viewBox="0 0 200 200"><use href="#ballerina"/></svg></button>
     <button class="char cupcake" aria-label="Cupcake"><svg viewBox="0 0 200 200"><use href="#cupcake"/></svg></button>
-    <button class="char shoes"   aria-label="Ballet shoes, tap to twirl"><svg viewBox="0 0 200 200"><use href="#shoes"/></svg></button>
-    <button class="char gymnast" aria-label="Gymnast, tap to leap"><svg viewBox="0 0 200 200"><use href="#gymnast"/></svg></button>
     <button class="char tiger"   aria-label="Derpy the tiger in a white cowboy hat"><svg viewBox="0 0 200 200"><use href="#tiger"/></svg></button>
   </div>
 </main>
 
 <script>
-  const timed = { shoes: "spin", gymnast: "flip" };
+  const timed = { ballerina: "spin" };
   document.querySelectorAll(".char").forEach(btn => {
     btn.addEventListener("click", () => {
       for (const [name, cls] of Object.entries(timed)) {
