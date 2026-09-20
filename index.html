@@ -61,10 +61,10 @@
   }
   .char:focus-visible { outline: 4px solid var(--purple); outline-offset: 4px; }
   .char.tiger   { width: 46%; right: 0;  bottom: 0;  animation: bob 2.6s ease-in-out -1s infinite; }
-  .char.ballerina { width: 58%; left: 14%; top: -8%; animation: floaty 4s ease-in-out infinite; }
+  .char.tutu { width: 58%; left: 16%; top: -6%; animation: floaty 4s ease-in-out infinite; }
   .char.cupcake { width: 28%; left: 2%;  bottom: 10%; animation: bob 3.6s ease-in-out -2s infinite; }
   .char.pop svg { animation: pop .6s ease; }
-  .char.ballerina.spin svg { animation: twirl 1.1s ease-in-out; }
+  .char.tutu.spin svg { animation: twirl 1.1s ease-in-out; }
 
   .stage svg.note { position: absolute; height: auto; width: 8%; color: var(--cream); animation: rise 3.4s ease-in-out infinite; pointer-events: none; }
   .stage svg.note.n1 { left: 6%; top: 14%; }
@@ -156,31 +156,20 @@
 
     
 
-    <!-- BALLERINA -->
-    <symbol id="ballerina" viewBox="0 0 200 200">
-      <ellipse cx="100" cy="196" rx="44" ry="4" fill="#000" opacity=".12"/>
-      <g fill="none" stroke="#2a1f4d" stroke-linecap="round" stroke-linejoin="round">
-        <!-- crossed legs on pointe -->
-        <path d="M98 116 C100 140 108 162 112 186" stroke-width="9"/>
-        <path d="M104 116 C100 140 94 162 90 186" stroke-width="9"/>
-        <path d="M112 186 L113 197 M90 186 L89 197" stroke-width="5"/>
-        <!-- arms -->
-        <path d="M110 46 C124 40 138 26 153 8" stroke-width="6"/>
-        <path d="M92 48 C76 52 58 60 42 76" stroke-width="6"/>
+    <!-- TUTU -->
+    <symbol id="tutu" viewBox="0 0 200 200">
+      <ellipse cx="100" cy="164" rx="80" ry="6" fill="#000" opacity=".1"/>
+      <g transform="translate(0 20)">
+      <path d="M86 58 C52 64 12 92 6 116 Q17.8 129 29.5 116 Q41.2 129 53.0 116 Q64.8 129 76.5 116 Q88.2 129 100.0 116 Q111.8 129 123.5 116 Q135.2 129 147.0 116 Q158.8 129 170.5 116 Q182.2 129 194.0 116 C188 92 148 64 114 58 Z" fill="#ffb3cc" stroke="#d9628f" stroke-width="2" stroke-linejoin="round"/><path d="M86 58 C60 64 28 88 22 108 Q31.8 121 41.5 108 Q51.2 121 61.0 108 Q70.8 121 80.5 108 Q90.2 121 100.0 108 Q109.8 121 119.5 108 Q129.2 121 139.0 108 Q148.8 121 158.5 108 Q168.2 121 178.0 108 C172 88 140 64 114 58 Z" fill="#ffcadb" stroke="#e27fa2" stroke-width="2" stroke-linejoin="round"/><path d="M86 58 C68 64 46 84 40 100 Q50.0 113 60.0 100 Q70.0 113 80.0 100 Q90.0 113 100.0 100 Q110.0 113 120.0 100 Q130.0 113 140.0 100 Q150.0 113 160.0 100 C154 84 132 64 114 58 Z" fill="#ffe3ec" stroke="#eb9db8" stroke-width="2" stroke-linejoin="round"/><path d="M90.64 60 L22 110" stroke="#d9628f" stroke-width="2" stroke-linecap="round" opacity=".35"/><path d="M93.76 60 L48 114" stroke="#d9628f" stroke-width="2" stroke-linecap="round" opacity=".35"/><path d="M96.88 60 L74 116" stroke="#d9628f" stroke-width="2" stroke-linecap="round" opacity=".35"/><path d="M100.0 60 L100 117" stroke="#d9628f" stroke-width="2" stroke-linecap="round" opacity=".35"/><path d="M103.12 60 L126 116" stroke="#d9628f" stroke-width="2" stroke-linecap="round" opacity=".35"/><path d="M106.24 60 L152 114" stroke="#d9628f" stroke-width="2" stroke-linecap="round" opacity=".35"/><path d="M109.36 60 L178 110" stroke="#d9628f" stroke-width="2" stroke-linecap="round" opacity=".35"/>
+      <path d="M84 60 C82 44 84 30 88 22 Q100 30 112 22 C116 30 118 44 116 60 Z" fill="#a855f7"/>
+      <path d="M88 22 Q100 34 112 22" stroke="#fff3d6" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M88 22 L86 8 M112 22 L114 8" stroke="#fff3d6" stroke-width="3" stroke-linecap="round"/>
+      <g fill="#fff3d6"><circle cx="94" cy="38" r="2"/><circle cx="106" cy="42" r="2"/><circle cx="100" cy="50" r="2"/><circle cx="92" cy="52" r="1.6"/><circle cx="108" cy="30" r="1.6"/></g>
+      <rect x="80" y="54" width="40" height="11" rx="5.5" fill="#7b4bd1"/>
+      <path d="M100 60 C88 50 80 56 84 64 C88 70 98 64 100 60 Z M100 60 C112 50 120 56 116 64 C112 70 102 64 100 60 Z" fill="#c9a6ff" stroke="#7b4bd1" stroke-width="2" stroke-linejoin="round"/>
+      <circle cx="100" cy="60" r="4" fill="#7b4bd1"/>
+      <path d="M96 64 L90 84 M104 64 L110 84" stroke="#7b4bd1" stroke-width="3.5" stroke-linecap="round"/>
       </g>
-      <!-- head, bun, neck -->
-      <path d="M96 34 L104 34 L106 46 L94 46 Z" fill="#2a1f4d"/>
-      <ellipse cx="101" cy="26" rx="9" ry="11" transform="rotate(14 101 26)" fill="#2a1f4d"/>
-      <path d="M108 25 L114 29 L108 32 Z" fill="#2a1f4d"/>
-      <circle cx="90" cy="22" r="6" fill="#2a1f4d"/>
-      <!-- torso / bodice -->
-      <path d="M88 48 C92 42 108 42 112 48 C112 62 110 74 108 86 L92 86 C90 74 88 62 88 48 Z" fill="#2a1f4d"/>
-      <path d="M90 50 C94 46 106 46 110 50 C110 64 108 76 106 86 L94 86 C92 76 90 64 90 50 Z" fill="#ffc3d5"/>
-      <path d="M92 52 Q100 60 108 52" stroke="#2a1f4d" stroke-width="2" fill="none" stroke-linecap="round"/>
-      <!-- tutu -->
-      <path d="M92 84 C70 88 44 100 34 116 C60 130 124 128 168 110 C154 96 126 86 108 84 Z" fill="#ffdbe6" stroke="#2a1f4d" stroke-width="2.5" stroke-linejoin="round"/>
-      <path d="M97 88 L50 118 M100 88 L72 124 M103 88 L100 126 M106 88 L128 124 M109 88 L152 112" stroke="#f0a3bd" stroke-width="2.5" stroke-linecap="round"/>
-      <path d="M34 116 C60 130 124 128 168 110 C160 118 130 134 96 134 C60 134 38 124 34 116 Z" fill="#f7bfd1"/>
     </symbol>
 
     <!-- CUPCAKE -->
@@ -219,14 +208,14 @@
     <svg class="note n2" viewBox="0 0 36 30" aria-hidden="true"><use href="#note2"/></svg>
     <svg class="note n3" viewBox="0 0 24 30" aria-hidden="true"><use href="#note1"/></svg>
 
-    <button class="char ballerina" aria-label="Ballerina, tap to twirl"><svg viewBox="0 0 200 200"><use href="#ballerina"/></svg></button>
+    <button class="char tutu" aria-label="Tutu, tap to twirl"><svg viewBox="0 0 200 200"><use href="#tutu"/></svg></button>
     <button class="char cupcake" aria-label="Cupcake"><svg viewBox="0 0 200 200"><use href="#cupcake"/></svg></button>
     <button class="char tiger"   aria-label="Derpy the tiger in a white cowboy hat"><svg viewBox="0 0 200 200"><use href="#tiger"/></svg></button>
   </div>
 </main>
 
 <script>
-  const timed = { ballerina: "spin" };
+  const timed = { tutu: "spin" };
   document.querySelectorAll(".char").forEach(btn => {
     btn.addEventListener("click", () => {
       for (const [name, cls] of Object.entries(timed)) {
