@@ -10,19 +10,22 @@ Alora's name in big cream lettering on a pink panel, surrounded by things she lo
 
 | Theme | Character | Tap behavior |
 |---|---|---|
+| Gymnastics | Purple ninja in a mid-kick stance (ninja gymnastics classes), traced from reference art | Hops |
 | Ballet | Vector tutu with a purple bodice and bow | Twirls |
 | Baking | Cupcake with cherry and sprinkles | Pops |
 | KPop Demon Hunters | Derpy the tiger in a white cowboy hat | Pops |
 | Music | Floating notes and sparkles | Decoration only |
 
-Gymnastics does not have an element yet; options are being reviewed.
-
 Animations respect `prefers-reduced-motion`.
 
 ## Structure
 
-- `index.html`: page markup, styles and SVG symbols (`<symbol id="tutu">`, `cupcake`, `tiger`, `note1`, `note2`, `sparkle`)
+- `index.html`: page markup, styles and SVG symbols (`<symbol id="ninja">`, `tutu`, `cupcake`, `tiger`, `note1`, `note2`, `sparkle`)
 - `CNAME`: custom domain for GitHub Pages (`alorasmith.com`)
+
+## Ninja artwork
+
+The ninja is the one character that is not hand-coded: it was traced from a reference illustration into SVG with [vtracer](https://github.com/visioncortex/vtracer) (stacked color layers, 6-bit color, speckle filter 12), white background removed. The traced paths live in `<symbol id="ninja">` in `index.html` (about 160 KB, gzipped by GitHub Pages). To redo it, crop the reference, upscale it 3x, and run vtracer again with the same settings.
 
 ## Editing
 
