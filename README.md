@@ -21,6 +21,7 @@ Animations respect `prefers-reduced-motion`.
 ## Structure
 
 - `index.html`: page markup, styles and SVG symbols (`<symbol id="ninja">`, `tutu`, `cupcake`, `tiger`, `note1`, `note2`, `sparkle`)
+- `favicon.svg`, `favicon-32.png`, `favicon.ico`, `apple-touch-icon.png`: the tab icon (Derpy the tiger, cropped to his face; PNG/ICO versions are for Safari and home screens)
 - `CNAME`: custom domain for GitHub Pages (`alorasmith.com`)
 
 ## Ninja artwork
